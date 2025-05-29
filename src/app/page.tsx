@@ -1,7 +1,10 @@
 "use client";
+
+import { Button } from "@/components/ui/button";
+
 function DownloadButton() {
   const handleDownload = () => {
-    const files = ["/file1.pdf", "/file2.pdf"];
+    const files = ["/file1.pdf", "/file2.pdf", "/file3.pdf"];
 
     files.forEach((file) => {
       const link = document.createElement("a");
@@ -14,12 +17,9 @@ function DownloadButton() {
   };
 
   return (
-    <button
-      onClick={handleDownload}
-      className="p-2 bg-blue-500 text-white rounded"
-    >
+    <Button onClick={handleDownload} className="">
       Download Files
-    </button>
+    </Button>
   );
 }
 
@@ -28,6 +28,7 @@ function DownloadButton() {
 export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen">
+      <h1>He He boii Caught you nigga!!!!</h1>
       <DownloadButton />
     </div>
   );
